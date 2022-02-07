@@ -67,6 +67,23 @@
             <artifactId>jackson-core</artifactId>
             <version>2.13.1</version>
         </dependency>
+        <dependency>
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-maven-plugin</artifactId>
+            <version>2.6</version>
+        </dependency>
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                    <groupId>io.qameta.allure</groupId>
+                    <artifactId>allure-maven</artifactId>
+                    <version>2.10.0</version>
+                    <configuration>
+                    <!-- Allure < 2.7.0 (default value): download from Bintray -->
+                        <allureDownloadUrl>https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/%s/allure-%s.zip</allureDownloadUrl>
+                    </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
