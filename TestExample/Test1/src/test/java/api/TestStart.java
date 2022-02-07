@@ -110,7 +110,7 @@ public class TestStart {
     public void successTestSix() {
         Specifications.installSpecification(Specifications.requestSpecification(URL), Specifications.responseSpecificationOK200());
 
-        String number = "1,5";
+        String number = "324,3434";
 
         value value = new value(number);
         isNumber resultNumber = given()
